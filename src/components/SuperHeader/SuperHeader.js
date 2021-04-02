@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { COLORS } from '../../constants';
+import { COLORS, WEIGHTS } from '../../constants';
 
 import SearchInput from '../SearchInput';
 import UnstyledButton from '../UnstyledButton';
@@ -26,10 +26,19 @@ const Wrapper = styled.div`
   font-size: 0.875rem;
   color: ${COLORS.gray[300]};
   background-color: ${COLORS.gray[900]};
+  width: 100%;
+  height: 2.5rem;
+  padding: 0 2rem;
+  font-weight: ${WEIGHTS.medium};
+
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 `;
 
 const MarketingMessage = styled.span`
   color: ${COLORS.white};
+  margin-right: auto;
 `;
 
 const HelpLink = styled.a`

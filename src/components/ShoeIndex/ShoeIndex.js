@@ -28,12 +28,11 @@ const ShoeIndex = ({ sortId, setSortId }) => {
         <ShoeGrid />
       </MainColumn>
       <LeftColumn>
+        <Spacer size={10} />
         <Breadcrumbs>
           <Breadcrumbs.Crumb href="/">Home</Breadcrumbs.Crumb>
           <Breadcrumbs.Crumb href="/sale">Sale</Breadcrumbs.Crumb>
-          <Breadcrumbs.Crumb href="/sale/shoes">
-            Shoes
-          </Breadcrumbs.Crumb>
+          <Breadcrumbs.Crumb href="/sale/shoes">Shoes</Breadcrumbs.Crumb>
         </Breadcrumbs>
         <Spacer size={42} />
         <ShoeSidebar />
@@ -42,17 +41,30 @@ const ShoeIndex = ({ sortId, setSortId }) => {
   );
 };
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+`;
 
-const LeftColumn = styled.div``;
+const LeftColumn = styled.div`
+  flex: 0 0 15.625rem;
 
-const MainColumn = styled.div``;
+  display: flex;
+  flex-direction: column;
+`;
 
-const Header = styled.header``;
+const MainColumn = styled.div`
+  flex: 4;
+`;
+
+const Header = styled.header`
+  display: flex;
+`;
 
 const Title = styled.h2`
   font-size: 1.5rem;
   font-weight: ${WEIGHTS.medium};
+  margin-right: auto;
 `;
 
 export default ShoeIndex;
