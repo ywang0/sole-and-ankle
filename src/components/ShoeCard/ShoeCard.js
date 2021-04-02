@@ -49,9 +49,9 @@ const ShoeCard = ({
         </Row>
         <Row>
           <ColorInfo>{pluralize('Color', numOfColors)}</ColorInfo>
-          {variant === 'on-sale' ? (
+          {variant === 'on-sale' && (
             <SalePrice>{formatPrice(salePrice)}</SalePrice>
-          ) : null}
+          )}
         </Row>
       </Wrapper>
     </Link>
@@ -61,9 +61,6 @@ const ShoeCard = ({
 const Link = styled.a`
   text-decoration: none;
   color: inherit;
-
-  flex: 1;
-  min-width: 20rem;
 `;
 
 const Wrapper = styled.article``;
